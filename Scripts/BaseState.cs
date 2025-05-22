@@ -2,11 +2,11 @@ namespace UnityBlocks.FSM
 {
     public class BaseState
     {
-        private StateMachineContext _context;
+        private SharedContext _context;
 
-        public StateMachineContext Context => _context;
+        public SharedContext Context => _context;
 
-        public void SetContext(StateMachineContext value)
+        public void SetContext(SharedContext value)
         {
             _context = value;
         }

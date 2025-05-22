@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace UnityBlocks.FSM
 {
-    public class StateMachineContext
+    public class SharedContext
     {
         private readonly Dictionary<string, object> _data = new();
 

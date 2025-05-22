@@ -1,17 +1,16 @@
-﻿using Example.States;
-using UnityBlocks.FSM;
+﻿using UnityBlocks.FSM;
 using UnityEngine;
 
-namespace Example
+namespace Example.Scripts
 {
     public class CharacterExample : MonoBehaviour
     {
         private BaseStateMachine _brain;
-        private StateMachineContext _context;
+        private SharedContext _context;
 
         private void Start()
         {
-            _context = new StateMachineContext();
+            _context = new SharedContext();
             _context.Set("characterName", "Robot_01");
             _context.Set("isGrounded", false);
             _context.Set("transform", transform);

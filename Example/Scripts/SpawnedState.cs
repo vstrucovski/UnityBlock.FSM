@@ -1,7 +1,7 @@
 ﻿using UnityBlocks.FSM;
 using UnityEngine;
 
-namespace Example.States
+namespace Example.Scripts
 {
     public class SpawnedState : BaseState
     {

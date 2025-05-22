@@ -1,7 +1,7 @@
 ﻿using UnityBlocks.FSM;
 using UnityEngine;
 
-namespace Example
+namespace Example.Scripts
 {
     public class DeadState : BaseState
     {

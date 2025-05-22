@@ -1,6 +1,6 @@
 ﻿using UnityBlocks.FSM;
 
-namespace Example.States
+namespace Example.Scripts
 {
     public class IdleState : BaseState
     {

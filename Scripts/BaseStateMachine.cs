@@ -11,16 +11,16 @@ namespace UnityBlocks.FSM
         private readonly List<TransitionRule> _transitions = new();
         private readonly List<DelayedRule> _delayedTransitions = new();
         private bool _isDebug;
-        private StateMachineContext _context;
+        private SharedContext _context;
         private StateMachineLogger _logger;
 
         public BaseState CurrentState => _currentState;
 
-        public BaseStateMachine(StateMachineContext context)
+        public BaseStateMachine(SharedContext context)
         {
             if (context == null)
             {
-                _context = new StateMachineContext();
+                _context = new SharedContext();
             }
             else
             {

@@ -19,6 +19,7 @@ To add this library to your Unity project, include the following line in your ma
 ```
 Or clone the repo into your Unity Packages/ or Assets/Plugins/ folder.
 
+<br>
 
 ## 🚀 Quick Start
 ### 1. Define Your States
@@ -64,6 +65,8 @@ void Update()
     brain.Update();
 }
 ```
+
+<br>
 
 ## Misc
 ### 1. SharedContext Design

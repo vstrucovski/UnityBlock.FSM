@@ -1,0 +1,21 @@
+{
+  "name": "unityblocks.fsm",
+  "displayName": "UnityBlocks.FSM",
+  "version": "0.1.0",
+  "unity": "2022.2",
+  "description": "dev module",
+  "dependencies": {
+  },
+  "author": {
+    "name": "Valeri Strukovski"
+  },
+  "keywords": [
+    "script"
+  ],
+  "category": "editor extensions",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vstrucovski/UnityBlock.FSM.git"
+  },
+  "type": "library"
+}

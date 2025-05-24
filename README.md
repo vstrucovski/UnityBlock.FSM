@@ -15,7 +15,7 @@
 ## 📦 Installation
 To add this library to your Unity project, include the following line in your manifest.json:
 ```json
-"unityblock.fsm" : "https://github.com/vstrucovski/UnityBlock.FSM.git"
+"unityblocks.fsm" : "https://github.com/vstrucovski/UnityBlock.FSM.git"
 ```
 Or clone the repo into your Unity Packages/ or Assets/Plugins/ folder.
 

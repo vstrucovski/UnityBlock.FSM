@@ -1,4 +1,5 @@
 ﻿using UnityBlocks.FSM;
+using UnityBlocks.FSM.Logging;
 using UnityEngine;
 
 namespace Example.Scripts
@@ -19,7 +20,7 @@ namespace Example.Scripts
             _context.Set("health", 100f);
 
             _brain = new BaseStateMachine(_context);
-            _brain.SetLogger(GetComponent<StateMachineLogger>());
+            _brain.SetLogger(GetComponent<IStateMachineLogger>());
             _brain.AddState(new SpawnedState());
             _brain.AddState(new IdleState());
             _brain.AddState(new JumpState());

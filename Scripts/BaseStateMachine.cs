@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityBlocks.FSM.Logging;
 using UnityEngine;
 
 namespace UnityBlocks.FSM
@@ -12,7 +13,7 @@ namespace UnityBlocks.FSM
         private readonly List<DelayedRule> _delayedTransitions = new();
         private bool _isDebug;
         private SharedContext _context;
-        private StateMachineLogger _logger;
+        private IStateMachineLogger _logger;
 
         public BaseState CurrentState => _currentState;
 
@@ -98,11 +99,18 @@ namespace UnityBlocks.FSM
                     return;
                 }
 
+                if (_currentState == null)
+                {
+                    _logger?.Log("| " + newState.GetType().Name);
+                }
+                else
+                {
+                    _logger?.Log("| " + _currentState.GetType().Name + " -> " + newState.GetType().Name);
+                }
+
                 _currentState?.OnExit();
                 _currentState = newState;
                 _currentState.OnEnter();
-                if (_logger)
-                    _logger.Log("> " + stateType.Name);
 
                 foreach (var delayed in _delayedTransitions)
                 {
@@ -133,7 +141,7 @@ namespace UnityBlocks.FSM
             _transitions.Add(new TransitionRule(null, typeof(TTo), condition));
         }
 
-        public void SetLogger(StateMachineLogger logger)
+        public void SetLogger(IStateMachineLogger logger)
         {
             _logger = logger;
         }

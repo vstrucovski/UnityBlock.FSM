@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
 using UnityEngine;
+#if UNITY_EDITOR
+#endif
 
-namespace UnityBlocks.FSM
+namespace UnityBlocks.FSM.Logging
 {
-    public class StateMachineLogger : MonoBehaviour // TODO to interface
+    public class EditorStateMachineLogger : MonoBehaviour, IStateMachineLogger
     {
         [SerializeField, Multiline(10)] private string output;
         [SerializeField] private int maxLines = 10;

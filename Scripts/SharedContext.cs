@@ -16,6 +16,19 @@ namespace UnityBlocks.FSM
             return _data.TryGetValue(key, out var value) ? (T) value : default;
         }
 
-        public bool Has(string key) => _data.ContainsKey(key);
+        public bool Has(string key)
+        {
+            return _data.ContainsKey(key);
+        }
+
+        public bool TryRemove(string key)
+        {
+            if (Has(key))
+            {
+                return _data.Remove(key);
+            }
+
+            return false;
+        }
     }
 }

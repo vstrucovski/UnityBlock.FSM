@@ -45,6 +45,7 @@ public class IdleState : BaseState
 ```csharp
 var context = new SharedContext();
 context.Set("characterName", "Robot_01");
+context.Set("shouldJump", false);
 
 var brain = new BaseStateMachine(context);
 brain.AddState(new IdleState());
@@ -95,5 +96,5 @@ public static class Ctx
 ### 2. Logging (Optional)
 Add a logger component to your GameObject and then set it to your state machine
 ```csharp
-brain.SetLogger(GetComponent<StateMachineLogger>());
+brain.SetLogger(GetComponent<IStateMachineLogger>());
 ```
